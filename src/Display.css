@@ -1,0 +1,16 @@
+.box {
+  width: 60vw;
+  height: 3rem;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+.display {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-right: 2rem;
+  width: 75vw;
+  justify-content: center;
+  align-items: center;
+}

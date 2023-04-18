@@ -1,0 +1,64 @@
+.modal {
+  display: block;
+  background-color: white;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1.3rem;
+  height: 50vh;
+  width: 50vw;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  border-radius: 5px;
+}
+.buttons {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: rgb(4, 176, 84);
+  border-style: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  width: 100px;
+  transition: 0.2s ease-in-out;
+}
+
+.not {
+  position: absolute;
+  right: 3rem; /* changed from 3rem */
+  background-color: red;
+  transition: 0.2s ease-in-out;
+}
+
+.not:hover {
+  background-color: rgb(177, 0, 0);
+}
+
+.send {
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(0, 117, 55);
+}
+
+.displaybox {
+  display: flex;
+  align-items: center;
+  width: 50vw;
+  height: 3rem;
+  color: black;
+  border-radius: 5px;
+}
