@@ -5,16 +5,28 @@ import Display from './Display';
 import Modal from './Modal';
 
 class App extends Component {
+  state = {
+    showModal: false
+  }
+
+
+modalHandler = (e) => {
+  e.preventDefault();
+  this.setState({
+    showModal: !this.state.showModal
+  })
+};
+
   render() {
     return (
       <div className="page">
         <div className="formarea">
-        <Form/> 
+        <Form submit={this.modalHandler}/> 
         </div>
         <div className="displayarea">
-        <Display/> 
+        <Display /> 
         </div>
-        <Modal />
+        {this.state.showModal && <Modal />}
       </div>
     );
   }

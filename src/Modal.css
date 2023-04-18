@@ -37,7 +37,7 @@ button {
 
 .not {
   position: absolute;
-  right: 3rem; /* changed from 3rem */
+  right: 3rem;
   background-color: red;
   transition: 0.2s ease-in-out;
 }

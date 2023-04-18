@@ -1,24 +1,24 @@
 import React from 'react';
 import './Modal.css'
 
-const Modal = () => {
+const Modal = (props) => {
   return (
     <div className="overlay">
       <div className="modal">
       <div className="displaybox">
-        <p>First name:</p>
+        <p>First name: <span>{props.firstname}</span></p>
       </div>
       <div className="displaybox">
-      <p>Last name:</p>
+      <p>Last name: <span>{props.lastname}</span></p>
       </div>
       <div className="displaybox">
-      <p>Phone number:</p>
+      <p>Phone: <span>{props.phone}</span></p>
       </div>
       <div className="displaybox">
-      <p>Role:</p>
+      <p>Role: <span>{props.role}</span></p>
       </div>
       <div className="displaybox">
-      <p>Message:</p>
+      <p>Message: <span>{props.message}</span></p>
       </div>
         <div className="buttons">
         <button className="send">Send message</button>

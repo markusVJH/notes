@@ -4,3 +4,10 @@
   gap: 1rem;
   margin-right: 2rem;
 }
+input,
+textarea,
+select {
+  border-style: none;
+  height: 1.5rem;
+  border-radius: 5px;
+}
