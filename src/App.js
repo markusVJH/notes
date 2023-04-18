@@ -26,7 +26,7 @@ modalHandler = (e) => {
         <div className="displayarea">
         <Display /> 
         </div>
-        {this.state.showModal && <Modal />}
+        {this.state.showModal && <Modal click={this.modalHandler}/>}
       </div>
     );
   }

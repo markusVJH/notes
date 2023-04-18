@@ -21,8 +21,8 @@ const Modal = (props) => {
       <p>Message: <span>{props.message}</span></p>
       </div>
         <div className="buttons">
-        <button className="send">Send message</button>
-        <button className="not">No, don't send!</button>
+        <button className="send" onClick={props.click}>Send message</button>
+        <button className="not" onClick={props.click}>No, don't send!</button>
         </div>
       </div>
     </div>
