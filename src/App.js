@@ -34,12 +34,7 @@ modalHandler = (e) => {
         <Form submit={this.modalHandler} change={this.displayHandler}/> 
         </div>
         <div className="displayarea">
-        <Display 
-        firstname={this.state.firstname}
-        lastname={this.state.lastname}
-        phone={this.state.phone}
-        role={this.state.role}
-        msg={this.state.msg}/> 
+        <Display {...this.state}/> 
         </div>
         {this.state.showModal && <Modal click={this.modalHandler}
         firstname={this.state.firstname}
