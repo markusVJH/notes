@@ -1,6 +1,8 @@
 .box {
+  display: flex;
+  flex-wrap: wrap;
   width: 60vw;
-  height: 3rem;
+  height: fit-content;
   background-color: white;
   color: black;
 }
@@ -9,8 +11,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(116, 223, 125);
-  gap: 5px;
+  background-color: rgb(75, 94, 77);
+  gap: 1px;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }

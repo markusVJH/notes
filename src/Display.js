@@ -17,7 +17,7 @@ const Display = (props) => {
       <p>Role: <span>{props.role}</span></p>
       </div>
       <div className="box">
-      <p>Message: <span>{props.message}</span></p>
+      <p>Message: <span>{props.msg}</span></p>
       </div>
     </div>
   );

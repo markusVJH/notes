@@ -6,9 +6,19 @@ import Modal from './Modal';
 
 class App extends Component {
   state = {
-    showModal: false
+    showModal: false,
+    firstname: "",
+    lastname: "",
+    phone: "",
+    role: "",
+    msg: "",
   }
 
+displayHandler = event => {
+  this.setState({
+    [event.target.name]: event.target.value,
+  });
+};
 
 modalHandler = (e) => {
   e.preventDefault();
@@ -21,12 +31,22 @@ modalHandler = (e) => {
     return (
       <div className="page">
         <div className="formarea">
-        <Form submit={this.modalHandler}/> 
+        <Form submit={this.modalHandler} change={this.displayHandler}/> 
         </div>
         <div className="displayarea">
-        <Display /> 
+        <Display 
+        firstname={this.state.firstname}
+        lastname={this.state.lastname}
+        phone={this.state.phone}
+        role={this.state.role}
+        msg={this.state.msg}/> 
         </div>
-        {this.state.showModal && <Modal click={this.modalHandler}/>}
+        {this.state.showModal && <Modal click={this.modalHandler}
+        firstname={this.state.firstname}
+        lastname={this.state.lastname}
+        phone={this.state.phone}
+        role={this.state.role}
+        msg={this.state.msg}/>}
       </div>
     );
   }
