@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstname": "Matt",
+      "lastname": "River",
+      "phone": "123456789",
+      "role": "student",
+      "msg": "hello xd"
+    },
+    {
+      "id": 2,
+      "firstname": "name",
+      "lastname": "nameson",
+      "phone": "876876",
+      "role": "teacher",
+      "msg": "lknlknlkn"
+    },
+    {
+      "id": 3,
+      "firstname": "Jason",
+      "lastname": "Serverson",
+      "phone": "123456789",
+      "role": "student",
+      "msg": "hello xd"
+    },
+    {
+      "id": 4,
+      "firstname": "Jim",
+      "lastname": "Jones",
+      "phone": "123456789",
+      "role": "student",
+      "msg": "hello xd"
+    },
+    {
+      "id": 5,
+      "firstname": "jkhbvh",
+      "lastname": "uhk",
+      "phone": "765765",
+      "role": "student",
+      "msg": "hello xd"
+    }]
+}

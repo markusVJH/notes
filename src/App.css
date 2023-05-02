@@ -1,6 +1,6 @@
 .page {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 2rem;
   position: fixed;
   top: 0;
@@ -8,6 +8,10 @@
   right: 0;
   bottom: 0;
   overflow: auto;
+}
+.upper {
+  display: flex;
+  flex-direction: row;
 }
 .formarea {
   width: 25%;

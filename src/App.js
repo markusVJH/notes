@@ -3,21 +3,40 @@ import './App.css'
 import Form from './Form';
 import Display from './Display';
 import Modal from './Modal';
+import Posts from './Posts';
+import axios from 'axios';
 
 class App extends Component {
   state = {
     showModal: false,
+    note: {
     firstname: "",
     lastname: "",
     phone: "",
     role: "",
     msg: "",
+  },
+  data: []
   }
+  
+  componentDidMount () {
+  axios.get('http://localhost:4001/posts/').then(res => {
+    this.setState({ data: res.data });
+  })
 
+/*   fetch('http://localhost:4001/posts/').then(res => res.json()).then(res => {
+    this.setState({ data: res });
+    console.log(res);
+  }) */
+}
 displayHandler = event => {
-  this.setState({
-    [event.target.name]: event.target.value,
-  });
+  const { name, value } = event.target;
+  this.setState(prevState => ({
+    note: {
+      ...prevState.note,
+      [name]: value,
+    },
+  }));
 };
 
 modalHandler = (e) => {
@@ -30,18 +49,19 @@ modalHandler = (e) => {
   render() {
     return (
       <div className="page">
+        <div className="upper">
         <div className="formarea">
         <Form submit={this.modalHandler} change={this.displayHandler}/> 
         </div>
         <div className="displayarea">
-        <Display {...this.state}/> 
+        <Display {...this.state.note}/> 
         </div>
+        <div>
+        </div>
+        </div>
+        <Posts data={this.state.data}/> 
         {this.state.showModal && <Modal click={this.modalHandler}
-        firstname={this.state.firstname}
-        lastname={this.state.lastname}
-        phone={this.state.phone}
-        role={this.state.role}
-        msg={this.state.msg}/>}
+       {...this.state.note}/>}
       </div>
     );
   }
